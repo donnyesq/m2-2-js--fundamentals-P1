@@ -23,14 +23,8 @@ maxValue2();
 // STRETCH
 // What if we wanted to write a function which took an unlimited number of
 // integers, and returned the largest one?
-const maxValue = (arguments) => {
-  let args = Array.prototype.slice.call(arguments);
-  args.filter(function () {
-    var maximumValue = Math.max(args);
-    return maximumValue;
-  });
-
-  return maximumValue;
+const maxValue = (...args) => {
+  return Math.max(...args);
 };
 
 // All of the following calls should be valid:
