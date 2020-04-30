@@ -114,11 +114,12 @@ const notCode = [
   "family",
 ];
 
-//REVIEW CODE BELOW (NOT WORKING)!!
+let decoded = secret;
 
-for (i = 0; i < notCode.length; i++) {
-  if (secret.includes(notCode[i])) {
-    secret.replace(notCode[i], "");
+notCode.forEach(function (word) {
+  if (secret.includes(word)) {
+    decoded = decoded.replace(word, "");
   }
-}
-console.log(secret);
+});
+
+console.log(decoded);
